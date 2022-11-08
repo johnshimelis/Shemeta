@@ -1,7 +1,7 @@
 import { DownOutlined ,UserOutlined,EditOutlined} from '@ant-design/icons';
 import { Button, Dropdown, Menu, Space,Badge ,Avatar,Popover,Progress,Tooltip} from 'antd';
 import React, {useEffect, useState} from 'react';
-import image from '../images/ser.jpg';
+import image from '../images/shemeta.png';
 import { useSelector,useDispatch } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import { actions} from '../store/products-slice';
