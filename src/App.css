@@ -957,7 +957,7 @@ input[type="text"][value="50 "] {
   
 }
 
-.selected_items{
+.ss{
   margin-top: -40px;
 }
 .selected_items .btn_two{
@@ -2087,7 +2087,7 @@ padding-bottom: 5%;
   width: 92%;
   height: 80%;
   margin-top: 2%;
- 
+  border-radius: 20px;
  }
  
  .last_home .banner h6{
@@ -2984,6 +2984,7 @@ nav .bar .fa-solid{
     padding-top: 20px;
   margin-top: 30px;
   margin-left: 1.7%;
+  cursor: pointer;
   background-color: #EEEEEE;
   width: 97%;
   height: 230px;
@@ -3119,6 +3120,7 @@ margin-left: 7%;
 
 }
 .last_home .high_rating .high_rating_img{
+  cursor: pointer;
   display: inline-block;
   margin-left: 3%;
   margin-top: 2%;
@@ -3333,7 +3335,7 @@ margin-left: 31px;
     height: 600px;
     width: 45%;
     margin-left: 180px;
-    margin-top:-10%;
+    margin-top:-22%;
     
   }
 .main_page .page_card .fourth_card img{
@@ -3388,7 +3390,7 @@ margin-left: 31px;
     font-size: 30px;
   }
   .asbeza .birr{
-    margin-top: -50px;
+    margin-top: -0px;
     margin-left: 16px;
   }
   .asbeza p{
@@ -3479,7 +3481,14 @@ margin-left: 31px;
   .last_header .search_input .badge {
     background-color: #E94042;
     height: 20px;
+    width: 3%;
     border-radius: 100%;
+    margin-left: 50px;
+  }
+
+  .last_header .search_input .badge .fa-solid{
+    margin-top: -30px;
+    margin-left: -60px;
   }
 
   .cart_page .product_card{
@@ -3869,7 +3878,7 @@ margin-left: 31px;
     }
   
     .last_header .search_input .logout {
-      margin-left: 20px;
+      margin-left: 15px;
     }
   
     nav {
@@ -4739,3 +4748,32 @@ margin-left: 31px;
   
       nav .menu ul li {}
     }
+
+
+/* All Prouduct */
+.all-product{
+ 
+  width: 100%;
+}
+.all-product .all-products{
+   display: inline-block;
+  background-color: #FAFAFA;
+  border-radius: 20px;
+  margin-left: 30px;
+  margin-top: 30px;
+  padding-left: 50px;
+  width: 19%;
+  padding-top: 20px;
+}
+.all-product .all-products img{
+  width: 100%;
+  margin-left: -20px;
+  border-radius: 20px;
+  margin-top: -10px;
+ 
+}
+
+.all-product .all-products h6{
+  margin-right: 10px;
+  padding-top: 10px;
+}

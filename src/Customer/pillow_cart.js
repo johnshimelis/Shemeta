@@ -1,36 +1,34 @@
 import React,{useEffect} from 'react'
 import { Layout,Card} from 'antd';
 import 'antd/dist/antd.css'; 
-import MainPageHeader from '../customer/main_page_header';
+import LastHeader from '../components/last_header';
 import { useNavigate,Link} from "react-router-dom";
 import {DeleteOutlined} from '@ant-design/icons';
 import { useSelector,useDispatch } from 'react-redux';
 import { actions } from '../store/products-slice';
 import HomeFooter from './home_footer';
 import product3 from '../images/shemeta13.jpg'
-import product1 from '../images/shemeta1.jpg'
+import product5 from '../images/shemeta3.jpg'
 const { Header} = Layout;
 const { Meta } = Card;
 export default function CartPage() {
   const navigate = useNavigate();
-   const toInfo = () =>{
-    navigate('/info')
-  }
    const products = [
     { 
-      name : "Hand Cross",
+     name : "Gurage Pillow",
+      price : 150,
+      descrpition : "a rectangular cloth bag stuffed with feathers or other soft materials, used to support the head when lying or sleeping. ",
+      photo : product5,
       total_price: 100,
       size : 1,
       discount : 15,
-      price : 54,
-      descrpition : "Hand crosses are made for daily use by priests and monks, as well as for use during the liturgy. They are held in the right hand as a sign of identification, and to perform the duties of one's religious office, as depicted in the triptych painting of the monk Ewostatewos and his followers. ",
-      photo : product1 ,
+      
     },
 ];
 
 return(
     <div className='cart_page'>
-        <MainPageHeader text="What are you looking for?" button_text="Join now"/>
+        <LastHeader text="What are you looking for?" button_text="Join now"/>
            <div className='content'>
              <h3>ዘንቢልዎ ውስጥ ያስገቡት</h3>
               <h5>1 እቃዎች <Link to='/all_products'>መገብየትዎን ይቀጥሉ!</Link></h5> 
@@ -64,13 +62,19 @@ return(
                     <h6 style={{marginTop:10}}>የአንዱ ዋጋ : {product.price} ብር</h6>
                     <h6>ቅናሽ ፡ {product.discount} ብር</h6>
                 </div>
-              </Card>);
+               
+             
+          </Card>);
           }
           )
         }
-    </div>
+             
+            
+   </div>
 </div>
-   <div className='orders'>
+
+     
+     <div className='orders'>
         <Card className='fourth_card'
            hoverable
            
@@ -116,7 +120,7 @@ return(
              )
           }
              <div className='total'>
-               <button type='warning' onClick={toInfo}  style={{marginTop:'2%'}}>ግዙ</button>
+               <button type='warning'  style={{marginTop:'2%'}}>ግዙ</button>
                <div className='bottom_border'>
              
              </div>

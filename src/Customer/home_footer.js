@@ -22,9 +22,9 @@ export default function HomeFooter() {
             <div className='part_2 '>
           <h3>ይግዙ</h3>
           
-            <h5>አስቤዛ</h5>
-             <h5>ምግብና መጠጥ</h5>
-              <h5>የውበቶ ዕቃዎች</h5>
+            <h5>ስዕላት </h5>
+             <h5>ቅርጻ ቅርጽ </h5>
+              <h5>ባህላዊ መሳሪያዎች</h5>
             </div>
          </Col>
     
@@ -40,8 +40,8 @@ export default function HomeFooter() {
             </Col>
               <Col span={4}>
          <div className='part_2'>
-          <h3>ሰረገላ</h3>
-          <h5>ስለ ሰረገላ</h5>
+          <h3>ሸመታ</h3>
+          <h5> ስለ ሸመታ</h5>
            <h5>ሀላፊነት</h5>
             <h5>ራዕይ</h5>
              

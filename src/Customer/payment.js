@@ -1,5 +1,5 @@
 import React,{ useState ,useEffect} from 'react'
-import LastHeader from '../components/last_header';
+import MainPageHeader from '../customer/main_page_header';
 import api from '../cust_adapter/base';
 import {Input,Button,Layout,Card,Steps,Row,message,Col,Modal} from 'antd';
 import { useNavigate,useLocation } from "react-router-dom";
@@ -148,7 +148,7 @@ const steps = [
 
   return (
     <div className='payment' id='payment'>
-               <LastHeader/>
+               <MainPageHeader/>
         <div className='container-fluid'>            
             <div className='content' id='content'>
                 <Steps current={current+2} className="steps">

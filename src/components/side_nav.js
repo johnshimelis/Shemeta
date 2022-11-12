@@ -11,11 +11,11 @@ export default function LastSideNav() {
     <div className='last_side_nav'>
       <ul>
         <li className='sub'><i class="fa-solid fa-bars"></i><a href="#">Category</a></li>
-        <li><img src={category1} /><a href="#" >Sculpture</a></li>
-        <li><img src={category2} /><a href="#">Spritual Painting</a></li>
-        <li><img src={category3} /><a href="#">Cultural Materials</a></li>
-        <li><img src={category4} /><a href="#">Cultural Weapons</a></li>
-        <li><img src={category5} /><a href="#">Patroits</a></li>
+        <li><img src={category1} /><a href="/sculpture" >Sculpture</a></li>
+        <li><img src={category2} /><a href="/spritual_painting">Spritual Painting</a></li>
+        <li><img src={category3} /><a href="/cultural_materials">Cultural Materials</a></li>
+        <li><img src={category4} /><a href="/cultural_weapon">Cultural Weapons</a></li>
+        <li><img src={category5} /><a href="/patroits">Patroits</a></li>
         
 
       </ul>

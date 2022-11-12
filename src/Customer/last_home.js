@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import api from '../cust_adapter/base'
 import LastHeader from '../components/last_header';
 import { Button, Carousel, Row, Rate  } from 'antd';
-import { useNavigate } from 'react-router-dom';
+import { Navigate, useNavigate } from 'react-router-dom';
 import {useSelector} from 'react-redux'
 import HomeFooter from './home_footer';
 import category1 from '../images/shemeta4.jpg';
@@ -20,9 +20,9 @@ import discount1 from '../images/shemeta14.jpg'
 import discount2 from '../images/shemeta7.jpg'
 import discount3 from '../images/shemeta2.jpg'
 import discount4 from '../images/shemeta9.jpg'
-import axum from '../images/axum.jpg'
+import axum from '../images/axum.jpeg'
 
-import lalibela from '../images/lalibela.jpg'
+import lalibela from '../images/lalibela.jpeg'
 import imager1 from '../images/imager1.jfif'
 import imager2 from '../images/imager2.jfif'
 import imager3 from '../images/imager3.jpg'
@@ -45,7 +45,9 @@ import image22 from '../images/discount1.png';
 import image23 from '../images/discount3.png';
 import image24 from '../images/women.png';
 import SideNav from '../components/side_nav';
+
 function LastHome() {
+   const navigate = useNavigate();
   const [isSideNav, setSideNav] = useState(false);
   const usenav=useNavigate();
   const isLoggedIn=useSelector(state=>state.auth.user)
@@ -55,35 +57,39 @@ function LastHome() {
   const close = () =>{
    setSideNav(!isSideNav);
   }
-  const [categories, setCategories] = useState();
-  const [highly_paid, setHighlyPaid] = useState();
-  const [packages, setPackage] = useState();
-  useEffect(()=>{
-    api.get('/categories')
-    .then(res=>{
-      setCategories(res.data.data);
-    })
-    .catch(err=>{
-      console.log('Error happened')
-    });
-    api.get('/popular-products')
-    .then(res=>{
-      setHighlyPaid(res.data.data.slice(0,5));
-     
-    })
-    .catch(err=>{
-      console.log("Error Occured")
-    });
-    api.get('/packages')
-    .then(res=>{
-      setPackage(res.data.data.slice(0,5));
-    
-    })
-    .catch(err=>{
-      console.log('Error Occured');
-    })
+   const toMainPage = () =>{
+    navigate('/main_page')
+  }
+    const toNecklessMain = () =>{
+    navigate('/neckless_main')
+  }
+    const toPaintMain = () =>{
+    navigate('/paint_main')
+  }
+    const toPillowMain = () =>{
+    navigate('/pillow_main')
+  }
+    const toCandleHolder = () =>{
+    navigate('/candle_holder')
+  }
 
-  },[]);  
+   const toPatroit = () =>{
+    navigate('/patroits')
+  }
+   const toCulturalMaterials = () =>{
+    navigate('/cultural_materials')
+  }
+   const toCulturalWeapons = () =>{
+    navigate('/cultural_weapon')
+  }
+   const toSpritualPaintings = () =>{
+    navigate('/spritual_painting')
+  }
+    const toSculpture = () =>{
+    navigate('/sculpture')
+  }
+
+  
   return (
     <div className='last_home'> 
     <LastHeader/>
@@ -206,24 +212,24 @@ function LastHome() {
   </div>
 
 
-   <div className='selected_items'>
-      <div className='selected_item'>
+   <div  className='selected_items'>
+      <div onClick={toSculpture} className='selected_item'>
         <img src={category1} />
         <h5>Sculpture</h5>
       </div>
-      <div className='selected_item'>
+      <div onClick={toSpritualPaintings} className='selected_item'>
         <img src={category2} />
         <h5>Spritual Painting</h5>
       </div>
-      <div className='selected_item'>
+      <div onClick={toCulturalMaterials} className='selected_item'>
         <img src={category3} />
         <h5>Cultural Materials</h5>
       </div>
-      <div className='selected_item'>
+      <div onClick={toCulturalWeapons} className='selected_item'>
         <img src={category4} />
         <h5>Cultural Weapons</h5>
       </div>
-      <div className='selected_item'>
+      <div onClick={toPatroit} className='selected_item'>
         <img src={category5} />
         <h5>Patroits</h5>
       </div>
@@ -244,7 +250,7 @@ function LastHome() {
  <div className='high_rating'>
           <h6>በጣም የተሸጡ እቃዎች </h6>
          
-              <div className='high_rating_img' >
+            <div onClick={toMainPage} className='high_rating_img' >
                <img alt="PepsiCo" src={product1} /> 
                <div className='high_rating_name'>
                 <h5>Hand Cross</h5>
@@ -253,38 +259,38 @@ function LastHome() {
                 allowHalf defaultValue={2.5} />
                </div>
            </div>
-              <div className='high_rating_img'>
+              <div onClick={toCandleHolder} className='high_rating_img'>
                <img alt="PepsiCo" src={product2} /> 
                <div className='high_rating_name'>
-                <h5>Hand Cross</h5>
-                <p> 12 br</p>
+                <h5>Candle Holder</h5>
+                <p> 54 br</p>
                 <Rate className='rate' 
                 allowHalf defaultValue={2.5} />
                </div>
            </div>
-              <div className='high_rating_img'>
+              <div onClick={toNecklessMain} className='high_rating_img'>
                <img alt="PepsiCo" src={product3} /> 
                <div className='high_rating_name'>
-                <h5>Hand Cross</h5>
+                <h5>Hand-made neckless</h5>
                 <p> 18 br</p>
                 <Rate className='rate' 
                 allowHalf defaultValue={2.5} />
                </div>
            </div>
-              <div className='high_rating_img'>
+              <div onClick={toPaintMain} className='high_rating_img'>
                <img alt="PepsiCo" src={product4} /> 
                <div className='high_rating_name'>
-                <h5>Hand Cross</h5>
-                <p> 12 br</p>
+                <h5>Paint</h5>
+                <p> 300 br</p>
                 <Rate className='rate' 
                 allowHalf defaultValue={2.5} />
                </div>
            </div>
-              <div className='high_rating_img'>
+              <div onClick={toPillowMain} className='high_rating_img'>
                <img alt="PepsiCo" src={product5} /> 
                <div className='high_rating_name'>
-                <h5>Hand Cross</h5>
-                <p> 12 br</p>
+                <h5>Gurage Pillow </h5>
+                <p> 32 br</p>
                 <Rate className='rate' 
                 allowHalf defaultValue={2.5} />
                </div>

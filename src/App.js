@@ -36,6 +36,22 @@ import Payment from './customer/payment';
 import Fav from './customer/fav';
 import ResetPassword from './common/reset_password';
 import UpdateProfile from './common/update_profile';
+import Patroits from './customer/patroits';
+import CulturalMaterials from './customer/cultural_materials';
+import CulturalWeapon from './customer/cultural_weapons';
+import Sculpture from './customer/sculpture';
+import SpritualPainting from './customer/spritual_painting';
+import NecklessMain from  './customer/neckless_main';
+import PaintMain from './customer/paint_main'
+import PillowMain from './customer/pillow_main'
+import CandleHolder from './customer/candler_holder_main'
+import NecklessCart from './customer/neckless_cart'
+import CandlerHolderCart from './customer/candle_holder_cart'
+import PillowCart from './customer/pillow_cart'
+import PaintCart from './customer/paint_cart'
+import MainPageHeader from './customer/main_page_header'
+
+
 function App() {
   const client=new QueryClient();
   return (
@@ -45,6 +61,27 @@ function App() {
               {/* <Route path='/success' element={<Success />} /> */}
               <Route path='/admin_dashboard' element={<AdminDashboard />} />
               <Route  path='/login' element={<Login />} />
+
+                <Route  path='/main_page_header' element={<MainPageHeader />} />
+
+              <Route  path='/neckless_cart' element={<NecklessCart />} />
+              <Route  path='/paint_cart' element={<PaintCart />} />
+              <Route  path='/pillow_cart' element={<PillowCart />} />
+              <Route  path='/candle_holder_cart' element={<CandlerHolderCart />} />
+
+
+              <Route  path='/neckless_main' element={<NecklessMain />} />
+              <Route  path='/paint_main' element={<PaintMain />} />
+               <Route  path='/pillow_main' element={<PillowMain />} />
+              <Route  path='/candle_holder' element={<CandleHolder />} />
+               
+
+              <Route  path='/patroits' element={<Patroits />} />
+              <Route  path='/cultural_materials' element={<CulturalMaterials />} />
+               <Route  path='/sculpture' element={<Sculpture />} />
+              <Route  path='/spritual_painting' element={<SpritualPainting />} />
+               <Route  path='/cultural_weapon' element={<CulturalWeapon />} />
+              
               <Route  path='/payment' element={<Payment />} />
               <Route  path='/transport' element={<Transport />} />
               <Route  path='/info' element={<Info />} />
@@ -79,6 +116,7 @@ function App() {
               <Route path='package_management' element={<AdminPackageManagement/>}/>
               <Route path='register_package' element={<RegisterPackage/>}/>
               <Route path='fulfillment' element={<Fulfilment/>}/>
+
           </Routes>
  </Router>
  </QueryClientProvider>

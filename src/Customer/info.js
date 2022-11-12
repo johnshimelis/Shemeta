@@ -2,7 +2,7 @@ import React,{useState,useEffect} from 'react'
 import { Input,Button,Card,Layout,Row, Col,Steps,message} from 'antd';
 import { useNavigate } from "react-router-dom";
 import api from '../adapter/base'
-import LastHeader from '../components/last_header';
+import MainPageHeader from '../customer/main_page_header';
 import { useSelector} from 'react-redux';
 import HomeFooter from './home_footer';
 const { Meta } = Card;
@@ -61,7 +61,7 @@ export default function Info() {
 
   return (
     <div className='info'>
-      <LastHeader/>
+      <MainPageHeader/>
         <div className='container-fluid'>
             
             <div className='content'>

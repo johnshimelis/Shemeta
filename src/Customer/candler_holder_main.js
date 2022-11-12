@@ -6,23 +6,47 @@ import { useNavigate,useLocation } from "react-router-dom";
 import { useDispatch } from 'react-redux';
 import {actions} from '../store/products-slice'
 import { fav_action } from '../store/fav-slice';
-import product1 from '../images/shemeta1.jpg'
-import product_1 from '../images/religious.jpg';
+import product2 from '../images/shemeta11.jpg'
+import product2_1 from '../images/shemeta10.jpg'
 const { Content} = Layout;
 
 export default function MainPage() {
   const navigate  = useNavigate();
-   const toCartPage = () =>{
-    navigate('/cart_page')
+   const toCandleHolder = () =>{
+    navigate('/candle_holder_cart')
   }
   const products = [
     {
-      name : "Hand Cross",
-      price : 54,
-      descrpition : "Hand crosses are made for daily use by priests and monks, as well as for use during the liturgy. They are held in the right hand as a sign of identification, and to perform the duties of one's religious office, as depicted in the triptych painting of the monk Ewostatewos and his followers. ",
-      photo : product1 ,
-      photo_1 : product_1 
+      name : "Candle Holder",
+      price : 12,
+      descrpition : "Candle holders are heat-proof containers used to hold and display candles safely. They are almost always made of glass, metal or cast iron.",
+      photo : product2,
+      photo2_1 : product2_1  
     },
+    //     {
+    //   name : "Candle Holder",
+    //   price : 54,
+    //   descrpition : "Candle holders are heat-proof containers used to hold and display candles safely. They are almost always made of glass, metal or cast iron. ",
+    //   photo : product1 
+    // },
+    //     {
+    //   name : "Candle Holder",
+    //   price : 54,
+    //   descrpition : "Candle holders are heat-proof containers used to hold and display candles safely. They are almost always made of glass, metal or cast iron. ",
+    //   photo : product1, 
+    // },
+    //     {
+    //   name : "Candle Holder",
+    //   price : 54,
+    //   descrpition : "Candle holders are heat-proof containers used to hold and display candles safely. They are almost always made of glass, metal or cast iron. ",
+    //   photo :product1 
+    // },
+    //     {
+    //   name : "Candle Holder",
+    //   price : 54,
+    //   descrpition : "Candle holders are heat-proof containers used to hold and display candles safely. They are almost always made of glass, metal or cast iron. ",
+    //   photo : product1 
+    // }
 
   ]
 return (
@@ -40,7 +64,7 @@ return (
             return(
            <div>
      <div className='first_card'>
-           <img src={product.photo_1} alt="product"/>
+           <img src={product.photo2_1} alt="product"/>
         </div>
            
          <div className='first_card'>
@@ -78,7 +102,7 @@ return (
         </div>
         <div className='last_button'>
         {/* ;navigate('/cart_page',{state:{counter:counter,product:product}}) */}
-          <Button className='primary'    style={{background: '#F4AD33'}} onClick={toCartPage}><span><i class="fa-solid fa-magnifying-glass"></i></span>ዘንቢል ዉስጥ ያስገቡ </Button>
+          <Button className='primary' onClick={toCandleHolder}   style={{background: '#F4AD33'}}><span><i class="fa-solid fa-magnifying-glass"></i></span>ዘንቢል ዉስጥ ያስገቡ </Button>
           <Button className='secondary' >ለወደፊት ያስቀምጡ</Button>
         </div>
     </div>

@@ -6,6 +6,7 @@ import LastHeader from '../components/last_header';
 import api from '../cust_adapter/base';
 import {useSelector} from 'react-redux';
 import HomeFooter from './home_footer';
+import product1 from '../images/shemeta1.jpg'
 const { Header} = Layout;
 const { Step } = Steps;
 
@@ -25,6 +26,17 @@ const steps = [
 ];
 const Meta=Card;
 export default function Transport() {
+     const product = [
+    { 
+      name : "Hand Cross",
+      total_price: 100,
+      size : 1,
+      discount : 15,
+      price : 54,
+      descrpition : "Hand crosses are made for daily use by priests and monks, as well as for use during the liturgy. They are held in the right hand as a sign of identification, and to perform the duties of one's religious office, as depicted in the triptych painting of the monk Ewostatewos and his followers. ",
+      photo : product1 ,
+    },
+];
 
     const [current, setCurrent] = useState(0);
     const navigate = useNavigate();
@@ -218,46 +230,48 @@ export default function Transport() {
       <div className='orders'>
           <Card className='fourth_card'
            hoverable
-           
            >
             <div className='title'>
               <h3>ትዕዛዞች</h3>
-             <h6> {quantity} እቃዎች</h6>
+             <h6> 1 እቃዎች</h6>
                 <div className='bottom_border'>
 
               </div>
               </div>
-             {selected_products?.map(choicen=>{
+            {product.map((products)=>{
                   <div className='bottom_border'>
 
               </div>
             
               return(
+          <div>
           <Card className='third_card'
            hoverable
            style={{ width: 150, height: 100, marginTop:50, background:'#FAFAFA'}}
-            cover={<img alt="አስቤዛ መካከለኛ ቤተሰብ" src={Array.isArray(choicen.image_paths)?choicen.image_paths[0]:choicen.image_paths} />}>
+            cover={<img alt="አስቤዛ መካከለኛ ቤተሰብ" src={products.photo} />}>
                 <div className='bottom_border'>
              </div>
              <div className='order_description'>
-               <h4>{choicen?.name}</h4>
-               <h6 style={{marginTop:20}}>የአንዱ ዋጋ : {choicen?.price} ብር</h6>
-               <h6>ጠቅላላ ዋጋ፡ {choicen?.totalPrice} ብር</h6>
+               <h4>{products.name}</h4>
+               <h6 style={{marginTop:20}}>የአንዱ ዋጋ : {products.price} ብር</h6>
+               <h6>ጠቅላላ ዋጋ፡ {products.total_price} ብር</h6>
              </div>
            </Card>
-             )
-            }
-             )
-          }
+           
               <div className='deliver'>
               <h6>ማድረሻ</h6>
-             <h6>ቅናሽ<span style={{color:'red'}}><strike>{totalDiscount} ብር</strike></span></h6>
+             <h6>ቅናሽ<span style={{color:'red'}}><strike>{products.discount} ብር</strike></span></h6>
               <h6>ታክስ</h6>
                <div className='bottom_border'>
              </div>
-             <h6 className='total_price'>ጠቅላላ ዋጋ፡ <span>{totalPrice} ብር</span></h6>
+             <h6 className='total_price'>ጠቅላላ ዋጋ፡ <span>{products.total_price} ብር</span></h6>
          
              </div>
+             </div>
+               )
+            }
+             )
+          }
              <div className='total'>
                 
              </div>
