@@ -213,26 +213,31 @@ function LastHome() {
 
 
    <div  className='selected_items'>
+     <div onClick={toPatroit} className='selected_item'>
+        <img src={category5} />
+        <h5>መዳረሻ</h5>
+      </div>
       <div onClick={toSculpture} className='selected_item'>
         <img src={category1} />
-        <h5>Sculpture</h5>
+        <h5>ቅርፃ ቅርፅ</h5>
       </div>
       <div onClick={toSpritualPaintings} className='selected_item'>
         <img src={category2} />
-        <h5>Spritual Painting</h5>
+        <h5>መንፈሳዊ ስዕሎች</h5>
       </div>
       <div onClick={toCulturalMaterials} className='selected_item'>
         <img src={category3} />
-        <h5>Cultural Materials</h5>
+        <h5>ባህላዊ ዕቃዎች</h5>
       </div>
       <div onClick={toCulturalWeapons} className='selected_item'>
         <img src={category4} />
-        <h5>Cultural Weapons</h5>
+        <h5>ባህላዊ መሳሪያዎች</h5>
       </div>
       <div onClick={toPatroit} className='selected_item'>
         <img src={category5} />
-        <h5>Patroits</h5>
+        <h5>አርበኞች</h5>
       </div>
+       
     </div>
       
    <div className='banner'>
